@@ -1,0 +1,158 @@
+body {
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header, section {
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    background: #333;
+    color: #fff;
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.projects-list .project-item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-radius: 5px;
+}
+
+.projects-list .project-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    height: 0%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    opacity: 0;
+}
+
+.projects-list .project-item:hover::before {
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.25s ease;
+    opacity: 1;
+}
+
+.projects-list .project-item:hover {
+    cursor: pointer;
+}
+
+.project-item img
+{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.project-item .title
+{
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.skills {
+    list-style: none;
+    padding: 0;
+}
+.skills li {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    background: #f4f4f4;
+}
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+@media (max-width: 1200px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
+
+#project-desc
+{
+    visibility: hidden;
+    content: '';
+    background-color: #eee;
+    position: absolute;
+    top: 15%;
+    left: calc(10% - 50px);
+    width: 80%;
+    height: 70%;
+    z-index: 5;
+    border-radius: 25px;
+    padding: 25px 50px;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.25);
+}
+
+#project-desc::after
+{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    background-color: green;
+    width: 100%;
+    height: 25px;
+    border-radius: 25px 0;
+}
+
+#project-desc #x-mark
+{
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    z-index: 6;
+    width: 50px;
+    height: 50px;
+    content: '';
+    border: 5px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    cursor: pointer;
+}
+
+#project-desc #x-mark:hover 
+{
+    transition: background-color 0.25s ease;
+    background-color: rgb(26, 190, 26);
+}

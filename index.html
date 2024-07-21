@@ -1,1 +1,100 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Roboto Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="roboto.css">
+
+</head>
+<body>
+    <header>
+        <h1>Kamil Socha</h1>
+        <p>Web Developer</p>
+    </header>
+
+    <section id="about">
+        <h2>O mnie</h2>
+        <p>Jestem doświadczonym web developerem specjalizującym się w tworzeniu responsywnych i nowoczesnych stron internetowych.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projekty</h2>
+        <div class="projects-list">
+            <div class="project-item" onclick="showDesc()">
+                <img src="https://www.rainforest-alliance.org/wp-content/uploads/2021/06/scarlet-macaw-square-2-400x400.jpg.optimal.jpg">
+                <p>Tytul projektu</p>
+                https://github.com/LinevPB/DirectX
+            </div>
+
+            <div class="project-item">
+                <img src="https://www.rainforest-alliance.org/wp-content/uploads/2021/06/scarlet-macaw-square-2-400x400.jpg.optimal.jpg">
+                <p>Tytul projektu</p>
+                https://github.com/LinevPB/php-forum
+            </div>
+
+            <div class="project-item">
+                <img src="https://www.rainforest-alliance.org/wp-content/uploads/2021/06/scarlet-macaw-square-2-400x400.jpg.optimal.jpg">
+                <p>Tytul projektu</p>
+                https://github.com/LinevPB/GO-mmo
+            </div>
+
+            <div class="project-item">
+                <img src="https://www.rainforest-alliance.org/wp-content/uploads/2021/06/scarlet-macaw-square-2-400x400.jpg.optimal.jpg">
+                <p>Tytul projektu</p>
+                https://github.com/LinevPB/Chat-Service
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Umiejętności</h2>
+        <ul class="skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <form>
+            <input type="text" placeholder="Twoje imię" required><br>
+            <input type="email" placeholder="Twój email" required><br>
+            <textarea placeholder="Twoja wiadomość" required></textarea><br>
+            <button type="submit">Wyślij</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kamil Socha</p>
+    </footer>
+
+    <div id="project-desc">
+        <div id="x-mark" onclick="hideDesc()">X</div>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet auctor velit. Sed non magna diam. Sed aliquam lectus sed dignissim cursus. Integer quis lectus felis. Cras vitae mauris in orci consectetur facilisis sit amet nec diam. Aliquam tincidunt neque feugiat mi malesuada rhoncus. Maecenas enim dolor, porta ut felis et, porta condimentum nisi. Praesent efficitur varius est, nec posuere diam suscipit a. Etiam vel libero nibh. Sed sit amet bibendum quam, eget tincidunt nisi.
+
+            Proin sem massa, bibendum id dolor non, sollicitudin ornare eros. Etiam consequat magna at diam aliquam, et pretium elit tristique. In at eros ac nibh feugiat dignissim in sit amet erat. Vestibulum in tempor justo. Nam ac varius turpis, vitae finibus velit. Proin tellus purus, scelerisque at purus sed, accumsan dictum nibh. Fusce congue id ex vitae cursus.
+
+            Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras nec ligula placerat massa semper dapibus vel sed eros. Pellentesque ipsum ante, commodo eu scelerisque at, faucibus nec turpis. Nunc venenatis, ante sit amet euismod volutpat, lectus felis mollis lacus, et suscipit leo erat sed odio. Pellentesque varius sollicitudin mi sed posuere. Aenean id aliquet massa. Praesent eleifend metus a tortor consectetur dapibus. Nulla metus magna, placerat non pharetra et, viverra vitae ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dolor metus, lobortis id vestibulum nec, efficitur id nunc. Ut in euismod nibh. Integer sollicitudin id ante nec congue. Nulla malesuada mauris mi, vitae consequat nunc convallis in.
+
+            Donec posuere neque non mi tristique, nec blandit leo consectetur. Donec posuere, urna eget eleifend feugiat, ante risus ornare enim, vel maximus augue elit dignissim justo. Nunc a tincidunt dolor. Aenean non ipsum ut lorem pharetra ornare a at odio. Ut consectetur imperdiet malesuada. Maecenas a mi eget nunc pulvinar egestas. Ut auctor velit non semper dignissim. Sed a ante lectus. Curabitur pellentesque sit amet odio nec rutrum. Mauris fringilla mauris mauris. Proin aliquam mauris vitae nibh tristique tempor. In efficitur non tellus et elementum. Praesent pellentesque ipsum sed libero ultrices tristique. Donec quis vestibulum erat, ut egestas ipsum. Donec malesuada nisl orci, sed maximus mi pharetra ut. Donec bibendum molestie augue.
+
+            Ut vitae pulvinar ligula. Nam quis nibh finibus, cursus lacus lobortis, pulvinar dui. Suspendisse ornare ullamcorper augue id venenatis. Suspendisse gravida pulvinar risus vel vestibulum. Cras sodales tempus ex, ac ultricies velit finibus id. Aenean facilisis posuere dui et varius. Phasellus leo metus, elementum non nisl et, faucibus posuere ex. Etiam dignissim consectetur placerat. Nullam id congue dui, quis viverra velit. Praesent non libero enim. Nullam quis sapien in tortor elementum fringilla. Pellentesque a nulla ac turpis ultrices rhoncus id ac velit.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
