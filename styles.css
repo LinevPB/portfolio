@@ -105,14 +105,14 @@ footer {
 
 #project-desc
 {
-    visibility: hidden;
+    /* visibility: hidden; */
     content: '';
     background-color: #eee;
     position: absolute;
     top: 15%;
     left: calc(10% - 50px);
     width: 80%;
-    height: 70%;
+    height: 1500px;
     z-index: 5;
     border-radius: 25px;
     padding: 25px 50px;
@@ -155,4 +155,79 @@ footer {
 {
     transition: background-color 0.25s ease;
     background-color: rgb(26, 190, 26);
+}
+
+#images
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 25px auto;
+}
+
+#images #main-img
+{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#images #main-img img
+{
+    width: 100%;
+}
+
+#images #img-list
+{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#images #img-list img
+{
+    width: 50%;
+    height: 50%;
+}
+
+#panel
+{
+    display: flex;
+}
+
+#panel #desc
+{
+    width: 80%;
+    padding-right: 30px;
+}
+
+#panel #side-bar
+{
+    width: 20%;
+}
+
+#panel #side-bar #technologies
+{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+#panel #side-bar #technologies .tech-item
+{
+    background-color: #333;
+    padding: 5px 10px;
+}
+
+#panel #side-bar .header
+{
+    text-align: center;
 }
