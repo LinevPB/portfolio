@@ -19,7 +19,7 @@ header {
     color: #fff;
 }
 
-.projects-list {
+#projects-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
@@ -27,15 +27,22 @@ header {
     margin: 0 auto;
 }
 
-.projects-list .project-item {
-    display: block;
+#projects-list .project-item {
+    border: 1px solid #fff;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px rgba(210, 210, 210, 0.25);
+    display: flex;
     position: relative;
     overflow: hidden;
     padding-bottom: 10px;
     border-radius: 5px;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.projects-list .project-item::before {
+#projects-list .project-item::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -47,7 +54,7 @@ header {
     opacity: 0;
 }
 
-.projects-list .project-item:hover::before {
+#projects-list .project-item:hover::before {
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
@@ -55,14 +62,14 @@ header {
     opacity: 1;
 }
 
-.projects-list .project-item:hover {
+#projects-list .project-item:hover {
     cursor: pointer;
 }
 
 .project-item img
 {
     width: 100%;
-    height: auto;
+    height: 80%;
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -70,9 +77,12 @@ header {
 
 .project-item .title
 {
+    height: 20%;
     font-size: 16px;
     position: relative;
     z-index: 1;
+    display: flex;
+    align-items: center;
 }
 
 .skills {
@@ -106,16 +116,16 @@ footer {
 #project-desc
 {
     visibility: hidden;
+
     content: '';
     background-color: #eee;
     position: absolute;
     top: 15%;
     left: calc(10% - 50px);
     width: 80%;
-    height: 1500px;
     z-index: 5;
     border-radius: 25px;
-    padding: 25px 50px;
+    padding: 25px 25px;
     box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -164,12 +174,14 @@ footer {
     align-items: center;
     width: 100%;
     margin: 25px auto;
+    background-color: #333;
+    border-radius: 10px;
 }
 
 #images #main-img
 {
-    width: 80%;
-    height: 100%;
+    max-width: 80%;
+    height: auto;
     display: flex;
     justify-content: center;
 }
@@ -177,22 +189,40 @@ footer {
 #images #main-img img
 {
     width: 100%;
+    border-radius: 10px;
 }
 
-#images #img-list
+#images #img-controls
 {
     width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+}
+
+#images #img-control button
+{
+    z-index: 10;
+}
+
+#images #img-controls #img-list
+{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+    height: 800px;
 }
 
 #images #img-list img
 {
-    width: 50%;
-    height: 50%;
+    width: 400px;
+    height: 250px;
+    transition: transform 0.3s ease;
+    z-index: 9;
+    cursor: pointer;
 }
 
 #panel
@@ -224,10 +254,37 @@ footer {
 #panel #side-bar #technologies .tech-item
 {
     background-color: #333;
+    color: #fff;
     padding: 5px 10px;
 }
 
 #panel #side-bar .header
 {
     text-align: center;
+}
+
+#panel #side-bar #src-link
+{
+    text-decoration: none;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    #img-list {
+        height: 600px;
+    }
+
+    #img-list img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    #img-list {
+        height: 400px;
+    }
+
+    #img-list img {
+        height: 200px;
+    }
 }
