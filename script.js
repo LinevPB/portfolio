@@ -30,21 +30,38 @@ const projects = {
     },
 
     2: {
-        title: "DX Graphics Engine",
-        desc: "DX Graphics Engine",
+        title: "DirectX 3D Renderer",
+        desc: `<h3>DirectX 3D Renderer</h3>
+                DirectX 3D Renderer to projekt w języku C++, który demonstruje podstawowe i zaawansowane techniki renderowania 3D przy użyciu biblioteki DirectX. Projekt umożliwia renderowanie modeli 3D, poruszanie się po scenie oraz generowanie dynamicznych środowisk. Jest to idealne narzędzie do nauki podstaw grafiki komputerowej, renderowania 3D oraz obsługi silników graficznych w DirectX.
+
+                <h3>Funkcjonalności:</h3>
+
+                <b>Renderowanie modeli 3D:</b> Obsługuje renderowanie trójwymiarowych modeli w czasie rzeczywistym z użyciem DirectX.<br>
+                <b>Poruszanie się w świecie 3D:</b> Umożliwia użytkownikowi poruszanie się po wirtualnym świecie za pomocą klawiatury i myszy.<br>
+                <b>Generowanie świata:</b> Oferuje funkcje do generowania dynamicznych środowisk, co pozwala na tworzenie i modyfikowanie świata 3D w czasie rzeczywistym.<br>
+                <b>Obsługa tekstur i oświetlenia:</b> Implementuje podstawowe techniki oświetleniowe oraz teksturowe, poprawiając realizm renderowanych scen.`,
         src: "https://github.com/LinevPB/DirectX",
         images: [
             "https://camo.githubusercontent.com/dc7cf7310872ce9ace6c05281b582ee803c05ee5cd468010ae23411d739516b9/68747470733a2f2f692e7974696d672e636f6d2f76692f4e37344342516c79554a342f6d617872657364656661756c742e6a7067"
         ],
         techs: [
             "C++",
-            "HLSL"
+            "HLSL",
+            "DirectX"
         ]
     },
 
     3: {
         title: "Chat service",
-        desc: "Chat service",
+        desc: `<h1>Chat Service</h1>
+
+            Chat Service to prosty system czatu oparty na technologii socketów, napisany w języku C#. Aplikacja umożliwia komunikację w czasie rzeczywistym między użytkownikami, którzy są połączeni z tym samym serwerem. Użytkownicy mogą wysyłać wiadomości za pomocą konsoli, a wszystkie wiadomości są przekazywane między klientami w czasie rzeczywistym. Projekt ten stanowi doskonały przykład użycia socketów do budowy aplikacji komunikacyjnej.
+
+            <h3>Funkcjonalności:</h3>
+
+            <b>Komunikacja w czasie rzeczywistym:</b> Umożliwia wymianę wiadomości między użytkownikami podłączonymi do tego samego serwera.<br>
+            <b>Interfejs konsolowy:</b> Użytkownicy wchodzą w interakcję z aplikacją za pomocą prostego interfejsu konsolowego, wpisując i odbierając wiadomości.<br>
+            <b>Obsługa wielu połączeń:</b> Serwer potrafi obsługiwać wielu jednoczesnych klientów, zapewniając płynne działanie czatu.`,
         src: "https://github.com/LinevPB/Chat-Service",
         images: [
             "https://www.tapeciarnia.pl/tapety/normalne/93394_lecaca_papuga.jpg",
@@ -53,13 +70,25 @@ const projects = {
             "https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png"
         ],
         techs: [
-            "C#"
+            "C#",
+            ".NET",
+            "TCP/IP"
         ]
     },
 
     4: {
-        title: "PHP CMS",
-        desc: "PHP CMS",
+        title: "PHP Forum",
+        desc: `<h1>PHP Forum</h1>
+
+                PHP Forum to prosty, ale funkcjonalny system forum dyskusyjnego stworzony przy użyciu PHP. Projekt ten jest idealnym rozwiązaniem dla osób poszukujących narzędzia do zarządzania dyskusjami online, które mogą dostosować do swoich potrzeb. Forum pozwala użytkownikom na rejestrację, logowanie, tworzenie tematów i postów, a także moderowanie treści.
+
+                <h3>Funkcjonalności:</h3>
+
+                <b>Rejestracja i logowanie użytkowników:</b> Umożliwia użytkownikom tworzenie kont i logowanie się w celu dostępu do pełnej funkcjonalności forum.<br>
+                <b>Tworzenie i zarządzanie tematami:</b> Użytkownicy mogą tworzyć nowe tematy, a także edytować i usuwać swoje posty.<br>
+                <b>Dodawanie i edytowanie postów:</b> Umożliwia użytkownikom publikowanie odpowiedzi na istniejące tematy oraz edytowanie swoich postów.<br>
+                <b>Moderacja treści:</b> Moderatorzy mają możliwość usuwania nieodpowiednich postów oraz zarządzania treściami na forum.<br>
+                <b>Przyjazny interfejs użytkownika:</b> Prosty i intuicyjny interfejs, który ułatwia nawigację i interakcję z forum.`,
         src: "https://github.com/LinevPB/php-forum",
         images: [
             "https://home.morele.net/wp-content/uploads/2022/04/ile-kosztuje-papuga-rozne-odmiany.jpg",
@@ -72,7 +101,7 @@ const projects = {
             "HTML",
             "CSS",
             "JS",
-            "SQL"
+            "MySQL"
         ]
     },
 
