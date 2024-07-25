@@ -34,10 +34,7 @@ const projects = {
         desc: "DX Graphics Engine",
         src: "https://github.com/LinevPB/DirectX",
         images: [
-            "https://www.tapeciarnia.pl/tapety/normalne/93394_lecaca_papuga.jpg",
-            "https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png",
-            "https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png",
-            "https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png"
+            "https://camo.githubusercontent.com/dc7cf7310872ce9ace6c05281b582ee803c05ee5cd468010ae23411d739516b9/68747470733a2f2f692e7974696d672e636f6d2f76692f4e37344342516c79554a342f6d617872657364656661756c742e6a7067"
         ],
         techs: [
             "C++",
@@ -65,7 +62,7 @@ const projects = {
         desc: "PHP CMS",
         src: "https://github.com/LinevPB/php-forum",
         images: [
-            "https://www.tapeciarnia.pl/tapety/normalne/93394_lecaca_papuga.jpg",
+            "https://home.morele.net/wp-content/uploads/2022/04/ile-kosztuje-papuga-rozne-odmiany.jpg",
             "https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png",
             "https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png",
             "https://www.premiere-urgence.org/wp-content/uploads/2021/11/800x400.png"

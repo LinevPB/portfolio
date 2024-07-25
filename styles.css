@@ -28,13 +28,11 @@ header {
 }
 
 #projects-list .project-item {
-    border: 1px solid #fff;
     background-color: #fff;
-    box-shadow: 1px 1px 1px rgba(210, 210, 210, 0.25);
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
     display: flex;
     position: relative;
     overflow: hidden;
-    padding-bottom: 10px;
     border-radius: 5px;
 
     justify-content: center;
@@ -49,8 +47,8 @@ header {
     left: 50%;
     width: 0%;
     height: 0%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 2;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 3;
     opacity: 0;
 }
 
@@ -69,20 +67,39 @@ header {
 .project-item img
 {
     width: 100%;
-    height: 80%;
-    display: inline-block;
+    height: 100%;
+    display: block;
     position: relative;
     z-index: 1;
+    object-fit: cover;
+    transition: transform 0.25s ease;
+}
+
+.project-item::after
+{
+    width: 100%;
+    height: 20%;
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    top: 75%;
+    left: 0px;
+    z-index: 1;
+}
+
+#projects-list .project-item:hover img {
+    transform: scale(1.25);
 }
 
 .project-item .title
 {
-    height: 20%;
-    font-size: 16px;
+    width: 100%;
+    min-height: 10%;
+    background-color: #fff;
+    font-size: 20px;
     position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
+    z-index: 2;
+    padding: 5px;
 }
 
 .skills {
@@ -105,20 +122,26 @@ footer {
     .projects {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .project-item::after {
+        top: 70%;
+    }
 }
 
 @media (max-width: 800px) {
     .projects {
         grid-template-columns: 1fr;
     }
+
+    .project-item::after {
+        top: 60%;
+    }
 }
 
 #project-desc
 {
     visibility: hidden;
-
-    content: '';
-    background-color: #eee;
+    background-color: #fafafa;
     position: absolute;
     top: 15%;
     left: calc(10% - 50px);
@@ -135,7 +158,7 @@ footer {
     position:absolute;
     top: 0;
     left: 0;
-    background-color: green;
+    background-color: #222;
     width: 100%;
     height: 25px;
     border-radius: 25px 0;
@@ -150,31 +173,31 @@ footer {
     width: 50px;
     height: 50px;
     content: '';
-    border: 5px solid #fff;
+    border: 3px solid #202020;
     border-radius: 30px;
-    color: #fff;
+    color: #eee;
     font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: green;
+    background-color: #343434;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
 
 #project-desc #x-mark:hover 
 {
     transition: background-color 0.25s ease;
-    background-color: rgb(26, 190, 26);
+    background-color: #222;
 }
 
 #images
 {
     display: flex;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
     width: 100%;
     margin: 25px auto;
-    background-color: #333;
     border-radius: 10px;
 }
 
@@ -184,6 +207,7 @@ footer {
     height: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #images #main-img img
@@ -201,9 +225,25 @@ footer {
     align-items: center;
 }
 
-#images #img-control button
+#images #img-controls button
 {
     z-index: 10;
+    border: 0;
+    background-color: #333;
+    color: #eee;
+    min-width: 50px;
+    min-height: 50px;
+    cursor: pointer;
+    margin: 20px;
+    font-size: 25px;
+    border-radius: 100px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.25s ease;
+}
+
+#images #img-controls button:hover
+{
+    background-color: #111;
 }
 
 #images #img-controls #img-list
@@ -213,13 +253,13 @@ footer {
     flex-direction: column;
     gap: 20px;
     overflow: hidden;
-    height: 800px;
+    max-height: 570px;
 }
 
 #images #img-list img
 {
-    width: 400px;
-    height: 250px;
+    width: 300px;
+    height: 125px;
     transition: transform 0.3s ease;
     z-index: 9;
     cursor: pointer;
